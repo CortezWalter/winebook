@@ -1,0 +1,280 @@
+html {
+    font-size: 62.5%;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+/* Menu */
+
+/* CORE STYLES */
+
+:root {
+    --primary-color: rgba(87, 5, 107, 0);
+    --overlay-color: rgba(117, 3, 121, 0.719);
+    --menu-speed: 0.75s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+  /* MENU STYLES */
+
+.menu-wrap {
+    position: fixed;
+    top: 0;
+    left: 92%;
+    z-index: 99;
+}
+
+.menu-wrap .toggler {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+}
+
+.menu-wrap .hamburger {
+    position: absolute;
+    top: 0;
+    left: 90%;
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    padding: 1rem;
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+  /* Hamburger Line */
+
+.menu-wrap .hamburger > div {
+    position: relative;
+    flex: none;
+    width: 100%;
+    height: 3px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+}
+
+  /* Hamburger Lines - Top & Bottom */
+
+.menu-wrap .hamburger > div::before,
+.menu-wrap .hamburger > div::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    width: 100%;
+    height: 3px;
+    background: inherit;
+    background: black;
+}
+
+  /* Moves Line Down */
+
+.menu-wrap .hamburger > div::after {
+    top: 10px;
+}
+
+  /* Toggler Animation */
+
+.menu-wrap .toggler:checked + .hamburger > div {
+    transform: rotate(135deg);
+}
+
+  /* Turns Lines Into X */
+
+.menu-wrap .toggler:checked + .hamburger > div:before,
+.menu-wrap .toggler:checked + .hamburger > div:after {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+  /* Rotate On Hover When Checked */
+
+.menu-wrap .toggler:checked:hover + .hamburger > div {
+    transform: rotate(225deg);
+}
+
+  /* Show Menu */
+
+.menu-wrap .toggler:checked ~ .menu {
+    visibility: visible;
+}
+
+.menu-wrap .toggler:checked ~ .menu > div {
+    transform: scale(1);
+    transition-duration: var(--menu-speed);
+}
+
+.menu-wrap .toggler:checked ~ .menu > div > div {
+    opacity: 1;
+    transition: opacity 0.4s ease 0.4s;
+}
+
+.menu-wrap .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*border-radius: 180px 0px 0px 180px;*/
+}
+
+.menu-wrap .menu > div {
+    background: var(--overlay-color);
+    border-radius: 50%;
+    width: 200vw;
+    height: 200vh;
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    transition: all 0.4s ease;
+}
+
+.menu-wrap .menu > div > div {
+    max-width: 90vw;
+    max-height: 100vh;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.menu-wrap .menu > div > div > ul > li {
+    list-style: none;
+    color: #fff;
+    letter-spacing: 3px;
+    font-size: 35px;
+    font-weight: bold;
+    padding: 1rem;
+    font-family: 'Bebas Neue', cursive;
+    text-transform: uppercase;
+    text-align: center;
+    width: 225px;
+    gap: 5px;
+}
+
+.menu-wrap .menu > div > div > ul > li > a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.4s ease;
+}
+
+.menu-wrap .menu > div > div > ul > li > h1 {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.4s ease;
+    font-size: 45px;
+}
+
+/* Logo */
+
+.logo {
+    height: 75px;
+    width: auto;
+    position: absolute;
+    left: 2%;
+    top: 2%;
+}
+
+/* Main */
+
+.img_ppal {
+    background-image: url("/images/BDHQ5XEZJRFOZLWTRSBHBWNKKU.webp");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 600px;
+    width: auto;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.text_ppal {
+    font-family: 'Nanum Gothic', sans-serif;
+    color: white;
+    font-size: 40px;
+    background-color: rgba(43, 42, 42, 0.452);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    margin: 30px;
+    font-weight: bold;
+    padding-left: 20px;
+    text-align: center;
+    border-radius: 75px;
+}
+
+.text_ppal:hover {
+    transition: all 500ms ease-in-out;
+}
+
+.text_ppal:hover .word span{
+    display: none;
+}
+
+.text_ppal:hover .word:after {
+    content: "El mejor lugar para GESTIONAR tu bodega";
+}
+
+/* NOSOTROS */
+
+.us {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    height: 600px;
+    background-color: black;
+    padding: 25px;
+}
+
+.title {
+    grid-column: 1fr;
+    text-align: center;
+    font-weight: bold;
+    font-size: 50px;
+    font-family: 'Bebas Neue', cursive;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding: 30px;
+    /*text-shadow: silver 1px 2px;*/
+    color: white;
+}
+
+.description {
+    grid-column: 1fr;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+}
+
+/* BENEFICIOS */
+
+.benefits {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 600px;
+    background-color: purple;
+    align-items: center;
+    padding: 25px;
+}
