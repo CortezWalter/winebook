@@ -271,10 +271,24 @@ html {
 
 .benefits {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10% 90%;
     height: 600px;
-    background-color: purple;
-    align-items: center;
+    background-color: rgb(117, 3, 121);
+    /*align-items: center;*/
     padding: 25px;
+}
+
+.subtitle {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    padding: 15px 0px;
+}
+
+.benefits_2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    text-align: center;
 }
