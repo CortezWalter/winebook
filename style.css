@@ -78,7 +78,7 @@ html {
     width: 100%;
     height: 3px;
     background: inherit;
-    background: black;
+    background: white;
 }
 
   /* Moves Line Down */
@@ -198,7 +198,8 @@ html {
 
 .img_ppal {
     /*background-image: url("/images/BDHQ5XEZJRFOZLWTRSBHBWNKKU.webp");*/
-    background-image: url("/images/enoturismo-vino.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.349), rgba(0, 0, 0, 0.349)),
+    url("/images/enoturismo-vino.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
