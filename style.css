@@ -197,7 +197,8 @@ html {
 /* Main */
 
 .img_ppal {
-    background-image: url("/images/BDHQ5XEZJRFOZLWTRSBHBWNKKU.webp");
+    /*background-image: url("/images/BDHQ5XEZJRFOZLWTRSBHBWNKKU.webp");*/
+    background-image: url("/images/enoturismo-vino.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
